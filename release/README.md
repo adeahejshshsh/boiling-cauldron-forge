@@ -1,52 +1,59 @@
-# 发布辅助脚本
+# Release helpers
 
-用于把构建产物上传到 CurseForge。**不包含任何令牌**，令牌通过环境变量传入。
+Scripts for uploading build artifacts to CurseForge. **No tokens are stored here** —
+the token is passed in through an environment variable.
 
-## 为什么需要手动创建项目
+[中文备份](README.zh_cn.md)
 
-CurseForge 的 [Upload API](https://support.curseforge.com/support/solutions/articles/9000197321-curseforge-upload-api)
-只提供以下能力：
+## Why the project must be created manually
 
-| 能力 | 接口 |
+The [CurseForge Upload API](https://support.curseforge.com/support/solutions/articles/9000197321-curseforge-upload-api)
+only offers the following:
+
+| Capability | Endpoint |
 |---|---|
-| 上传文件到**已存在**的项目 | `POST /api/projects/{projectId}/upload-file` |
-| 修改已有文件 | `POST /api/projects/{projectId}/update-file` |
-| 查询游戏版本 / 依赖 | `GET /api/game/versions`、`/api/game/dependencies` |
+| Upload a file to an **existing** project | `POST /api/projects/{projectId}/upload-file` |
+| Update an existing file | `POST /api/projects/{projectId}/update-file` |
+| Query game versions / dependencies | `GET /api/game/versions`, `/api/game/dependencies` |
 
-**没有"创建项目"的接口**，项目必须先在
-[authors.curseforge.com](https://authors.curseforge.com/) 网页端手动创建。
+There is **no endpoint for creating a project**. The project page has to be created in the web UI at
+[authors.curseforge.com](https://authors.curseforge.com/) first.
 
-## 使用步骤
+## Usage
 
 ```bash
-# 1) 构建
+# 1) Build
 ./gradlew build
 
-# 2) 设置令牌与项目 ID（仅当前 shell 有效，不会写入仓库）
-export CURSEFORGE_TOKEN='你的 API Token'
+# 2) Provide the token and project id (current shell only — never written to the repo)
+export CURSEFORGE_TOKEN='your api token'
 export PROJECT_ID='123456'
 
-# 3) 上传
+# 3) Upload
 ./release/curseforge-upload.sh
 ```
 
-脚本会：
+The script will:
 
-1. 调用 `/api/game/versions` 解析 `1.20.1` 与 `Forge` 的版本 ID，并打印出来供人工确认
-2. 用 `release/release-notes-1.0.0-forge.md` 生成 metadata
-3. 声明 `kaleidoscope-cookery` 为必需前置
-4. `POST` 上传 jar，打印返回的文件 ID
+1. Resolve the game version ids for `1.20.1` and `Forge` via `/api/game/versions`
+   and print them for a manual sanity check
+2. Build the metadata from `release/release-notes-1.0.0-forge.md`
+3. Declare `kaleidoscope-cookery` as a required dependency
+4. `POST` the jar and print the returned file id
 
-## 安全注意
+## Security notes
 
-- **不要把 `CURSEFORGE_TOKEN` 写进脚本、`.env` 或提交记录**
-- 上传完成后可执行 `unset CURSEFORGE_TOKEN`
-- 令牌泄露请立即到 [API Tokens](https://authors.curseforge.com/#/settings/api-tokens) 吊销
+- **Never** put `CURSEFORGE_TOKEN` into a script, an `.env` file, or a commit
+- Run `unset CURSEFORGE_TOKEN` afterwards
+- If the token leaks, revoke it immediately at
+  [API Tokens](https://authors.curseforge.com/#/settings/api-tokens)
 
-## 其他文件
+## Files
 
-| 文件 | 用途 |
+| File | Purpose |
 |---|---|
-| `project-page.md` | 创建项目时要填的简介与描述文案 |
-| `release-notes-1.0.0-forge.md` | 上传时作为 changelog 的内容 |
-| `resolve_versions.py` | 版本 ID 解析器（被主脚本调用） |
+| `project-page.md` | Summary and description to paste into the CurseForge project page |
+| `release-notes-1.0.0-forge.md` | Changelog submitted with the file |
+| `resolve_versions.py` | Game version id resolver used by the main script |
+
+Chinese backups are kept alongside as `*.zh_cn.md`.

@@ -1,0 +1,52 @@
+沸鼎烟火（Boiling Cauldron）· Forge 版
+NOTICE
+
+> 本文为中文备份，英文版见 [English](NOTICE)
+
+本文件记录版权归属与来源，许可证正文见 LICENSE 与 LICENSE-ASSETS。
+
+--------------------------------------------------------------------------------
+
+源代码：MIT License
+    Copyright (c) 2026 adeahejshshsh
+
+    完整条款见 LICENSE。
+
+游戏资源：CC0 1.0 Universal（公有领域）
+    完整条款见 LICENSE-ASSETS。
+
+--------------------------------------------------------------------------------
+
+来源说明
+
+本项目的部分内容源自 "Boiling Cauldron（沸鼎烟火）" 原始 Fabric 版本，
+作者为 Xkbsx413 及其画师团队，原项目以 CC0-1.0 发布（公有领域）：
+    https://github.com/Xkbsx413/boiling-cauldron
+
+因原项目为公有领域，本移植版得以将源代码部分重新以 MIT 分发。
+原始项目的作者与画师对本案的贡献在此致谢。
+
+--------------------------------------------------------------------------------
+
+第三方内容
+
+本项目未打包任何第三方模组的代码或资源。以下仅为互操作引用：
+
+    森罗厨房（Kaleidoscope Cookery）
+        配方类型 kaleidoscope_cookery:pot
+        物品标签 kaleidoscope_cookery:pot_ingredient
+        物品 ID   kaleidoscope_cookery:oil_block
+        标签      forge:crops/chilipepper
+        该模组代码为 BSD-3-Clause、资源为 CC BY-NC-SA 4.0，
+        其授权不适用于本项目。
+
+    Minecraft / Minecraft Forge
+        版权所有 Mojang Studios 与 Forge 开发团队。
+        本项目的 MIT / CC0 声明不覆盖它们。
+
+--------------------------------------------------------------------------------
+
+声明
+
+本项目的 MIT / CC0 授权仅覆盖本仓库中由本项目作者创作的部分。
+使用者应自行确认其使用场景是否符合所在地法律及相关第三方条款。

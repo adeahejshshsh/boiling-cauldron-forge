@@ -1,50 +1,48 @@
-## 1.0.0-forge（2026-11-21）
+## 1.0.0-forge (2026-11-21)
 
-首个 Forge 1.20.1 版本，基于 Fabric 1.0.0 移植。
+First Forge 1.20.1 release, ported from the Fabric 1.0.0 version.
 
-### 移植
+### Porting
 
-- 注册体系改为 `DeferredRegister`，入口改为 `@Mod`
-- 方块实体基类改为 `BaseEntityBlock`，容器接口改为 `WorldlyContainer`
-- GUI 改为 `IForgeMenuType` + `NetworkHooks.openScreen` + `MenuScreens`
-- 渲染层改用模型 JSON 的 `render_type: cutout`
-- 战利品注入改为 `LootTableLoadEvent`，商人交易改为 `WandererTradesEvent`
-- 世界生成改用 `forge:add_features` biome modifier
-- 森罗厨房辣椒标签由 `c:crops/chilipepper` 修正为 `forge:crops/chilipepper`
+- Registration moved to `DeferredRegister`; entry point is now `@Mod`
+- Block entities now extend `BaseEntityBlock`; containers use `WorldlyContainer`
+- GUI uses `IForgeMenuType` + `NetworkHooks.openScreen` + `MenuScreens`
+- Render layers moved to the model JSON `render_type: cutout` field
+- Loot injection uses `LootTableLoadEvent`; trader offers use `WandererTradesEvent`
+- World generation uses a `forge:add_features` biome modifier
+- Kaleidoscope Cookery chilli tag corrected from `c:crops/chilipepper` to `forge:crops/chilipepper`
 
-### 修复
+### Fixes
 
-- **modId 合规**：Forge 要求 `^[a-z][a-z0-9_]{1,63}$`，原 `boiling-cauldron` 含连字符会导致启动崩溃。
-  现使用 modId `boilingcauldron` + `namespace = "boiling-cauldron"`，资源路径与翻译键保持不变
-- **补 `bamboo_root` 掉落表**：原版本缺失，导致挖掉即消失
-- **补种子物品模型**：原先依赖 datagen 残留产物
+- **Valid mod id**: Forge requires `^[a-z][a-z0-9_]{1,63}$`. The original `boiling-cauldron`
+  contains a hyphen and would crash at startup. The mod now uses modId `boilingcauldron`
+  with `namespace = "boiling-cauldron"`, so every resource path and translation key is unchanged
+- **Added the missing `bamboo_root` loot table** — it previously dropped nothing when mined
+- **Added the seed item models** — they previously relied on stale datagen output
 
-### 新增
+### New
 
-- **自定义配方类型 `boiling-cauldron:bobo_soak`**：底料 → 钵钵鸡 改为数据包驱动，
-  口味、效果、次数、浸泡时长、产物全部可由 JSON 定义
-- **口味完全数据化**：删除 `BoboFlavor` 枚举，改为 `FlavorProfile`（存入物品 NBT），
-  数据包可新增任意口味
-- **操作提示**：锅交互失败时通过 actionbar 说明原因（需先加水 / 已有底料 / 锅内有食物等）
-- **JEI 兼容**：「钵钵鸡浸泡」分类展示底料 → 钵钵鸡，食物槽位枚举所有可食用物品；
-  底料附带信息页
-- **堆肥**：竹荪菌落 0.65、繁茂草丛 0.30
-- **Forge 数据生成**：8 个 Provider 覆盖模型、语言、掉落表、配方、标签；
-  92 个产物已提交至 `src/generated/resources`
+- **Custom recipe type `boiling-cauldron:bobo_soak`** — base → Bobo Chicken is now datapack-driven;
+  flavour, effects, uses, soak time and output can all be defined in JSON
+- **Fully data-driven flavours** — the `BoboFlavor` enum is gone, replaced by `FlavorProfile`
+  stored in the item's NBT, so datapacks can add arbitrary flavours
+- **Interaction hints** — the pot now explains failures on the action bar
+  (needs water first / already has a base / pot still contains food)
+- **JEI integration** — a "Bobo Chicken Soaking" category showing base → Bobo Chicken,
+  an ingredient slot listing every edible item, and an info page for each base
+- **Composting** — bamboo fungus colony 0.65, lush grass 0.30
+- **Forge data generation** — 8 providers covering models, language files, loot tables, recipes and
+  tags; the 92 generated files are committed under `src/generated/resources`
 
-### 验证
+### Verification
 
-- `./gradlew build` 通过，产物约 195 KB
-- 专用服务端启动通过（`Done`），配方/标签/战利品表均正常加载
-- 迁移到 datagen 前后逐文件比对：**203 个资源零丢失**
+- `./gradlew build` passes; the artifact is about 195 KB
+- A dedicated server starts successfully (`Done`), with recipes, tags and loot tables all loading
+- File-by-file comparison before and after the datagen migration: **all 203 resources preserved**
 
-### 授权
+### Known limitations
 
-- 源代码改为 **MIT**，游戏资源继续保持 **CC0-1.0**
-- 新增 `LICENSING.md` 说明双授权的文件划分与第三方内容边界
-
-### 已知限制
-
-- 麻辣烫（P3）尚未实现
-- 盛花荷叶平面模型、钵钵鸡锅 Blockbench 模型、森罗炒锅配方、世界生成 JSON 仍为手写
-- 音效、粒子、比较器输出未实现
+- Malatang (the planned third gameplay branch) is not implemented
+- The blooming lotus leaf plane models, the Blockbench pot model, the Kaleidoscope wok recipes and
+  the world generation JSON remain hand-written
+- Sounds, particles and comparator output are not implemented

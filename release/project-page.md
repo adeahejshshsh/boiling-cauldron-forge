@@ -1,75 +1,80 @@
-# CurseForge 项目资料（复制粘贴用）
+# CurseForge project materials (copy & paste)
 
-本文件存放创建 CurseForge 项目时需要填写的文案，避免临时拼凑。
+Ready-to-use copy for creating and maintaining the CurseForge project page.
+
+[中文备份](project-page.zh_cn.md)
 
 ---
 
-## 基本信息
+## Basic information
 
-| 字段 | 建议值 |
+| Field | Suggested value |
 |---|---|
-| 项目名称 | 沸鼎烟火（Boiling Cauldron） |
-| 项目类型 | Minecraft → Mods |
-| 分类 | Food / Agriculture（可再选 World Gen） |
-| 游戏版本 | 1.20.1 |
-| 模组加载器 | Forge |
-| 许可证 | MIT（代码）+ CC0-1.0（资源） |
-| 源码地址 | https://github.com/adeahejshshsh/boiling-cauldron-forge |
-| 问题反馈 | 同上 Issues |
-| 前置依赖 | Kaleidoscope Cookery（slug: `kaleidoscope-cookery`，requiredDependency） |
+| Project name | Boiling Cauldron |
+| Project type | Minecraft → Mods |
+| Category | Food / Agriculture (optionally World Gen) |
+| Game version | 1.20.1 |
+| Mod loader | Forge |
+| Licence | MIT (code) + CC0-1.0 (assets) |
+| Source | https://github.com/adeahejshshsh/boiling-cauldron-forge |
+| Issues | Same repository, Issues tab |
+| Required dependency | Kaleidoscope Cookery (slug: `kaleidoscope-cookery`, `requiredDependency`) |
 
 ---
 
-## 简介（Summary，约 200 字符）
+## Summary (about 200 characters)
 
 ```
-以麻辣烫、钵钵鸡为主题的 Forge 烹饪模组：种植香料、用炒锅熬制底料、在钵钵鸡锅里冷泡出成品。需要森罗厨房作为前置。
+A Forge cooking mod about Malatang and Bobo Chicken: grow spices, brew soup bases in a wok, then cold-soak your food in the Bobo Chicken Pot. Requires Kaleidoscope Cookery.
 ```
 
 ---
 
-## 详细描述（Description，Markdown）
+## Description (Markdown)
 
 ```markdown
-# 沸鼎烟火（Boiling Cauldron）
+# Boiling Cauldron
 
-以 **麻辣烫 / 钵钵鸡** 为主题的 Forge 烹饪模组。
+A Forge cooking mod themed around **Malatang** and **Bobo Chicken**.
 
-## 玩法
+## Gameplay
 
-1. **种植与采集**：生姜、大蒜、贡菜、花椒四种作物；冬笋、竹荪、莲藕来自竹根殖块与盛花荷叶。
-2. **熬制底料**：在森罗厨房的炒锅里制作菌菇、麻辣、藤椒三种底料。
-3. **冷泡成菜**：放下钵钵鸡锅，加水、投底料，把食物放进 4×4 格中浸泡 60 秒。
-4. **食用**：成品按口味提供生命恢复 / 力量 / 抗性提升效果，最多可叠加 3 种口味。
+1. **Grow and gather** — four crops (ginger, garlic, gong cai, Sichuan pepper), plus winter bamboo
+   shoots, bamboo fungus and lotus root obtained from the bamboo root block and blooming lotus leaves.
+2. **Brew soup bases** — cook mushroom, mala and rattan pepper bases in the Kaleidoscope Cookery wok.
+3. **Cold-soak** — place a Bobo Chicken Pot, add water and a soup base, then soak food in its 4×4 grid
+   for 60 seconds per slot.
+4. **Eat** — the result grants Regeneration, Strength or Resistance depending on the base, and up to
+   three flavours can be stacked on a single item.
 
-## 特性
+## Features
 
-- 底料、口味、浸泡时长、产出物品**全部由数据包配方驱动**，可自由扩展
-- 口味效果支持任意原版/模组药水效果
-- 内置 JEI 支持（可选安装），可查询「钵钵鸡浸泡」配方
-- 兼容 Forge 47.3.0+ / Minecraft 1.20.1
+- Bases, flavours, soak time and output items are **fully datapack-driven** and easy to extend
+- Flavour effects accept any vanilla or modded mob effect
+- Built-in JEI support (optional) with a dedicated "Bobo Chicken Soaking" category
+- Supports Forge 47.3.0+ on Minecraft 1.20.1
 
-## 前置
+## Requirements
 
-**[森罗厨房 Kaleidoscope Cookery](https://www.curseforge.com/minecraft/mc-mods/kaleidoscope-cookery)**
-必须安装，否则底料无法制作。
+**[Kaleidoscope Cookery](https://www.curseforge.com/minecraft/mc-mods/kaleidoscope-cookery)**
+is required — without it the soup bases cannot be crafted.
 
-JEI 为可选。
+JEI is optional.
 
-## 许可
+## Licence
 
-- 源代码：MIT
-- 游戏资源：CC0-1.0
+- Source code: MIT
+- Game assets: CC0-1.0
 
-原始 Fabric 版本由 Xkbsx413 及画师团队创作，以 CC0 发布。
+The original Fabric version was created by Xkbsx413 and the artist team, and released under CC0.
 ```
 
 ---
 
-## 上传后需要手动确认的项
+## After uploading — check these manually
 
-1. 项目审核：新项目首次提交可能进入人工审核，通常数小时到数天。
-2. 文件审核：首个文件也可能被扫描/审核后才公开。
-3. 前置关系：脚本已在 metadata 中声明 `kaleidoscope-cookery` 为 `requiredDependency`，
-   上传后可在文件页确认是否正确关联。
-4. 图标：使用仓库中的 `src/main/resources/icon.png`。
+1. **Project review**: a brand-new project may go through manual review, typically a few hours to a few days.
+2. **File review**: the first file may also be scanned/reviewed before it becomes public.
+3. **Dependency relation**: the upload script already declares `kaleidoscope-cookery` as
+   `requiredDependency`; confirm it appears correctly on the file page.
+4. **Icon**: use `src/main/resources/icon.png` from the repository.

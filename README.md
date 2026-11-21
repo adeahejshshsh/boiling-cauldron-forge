@@ -1,52 +1,62 @@
-# 沸鼎烟火（Boiling Cauldron）· Forge 版
+# Boiling Cauldron (沸鼎烟火) · Forge Edition
 
-以 **麻辣烫 / 钵钵鸡** 为主题的 Minecraft 烹饪模组，本仓库是 **Forge 1.20.1** 版本。
+A Minecraft cooking mod themed around **Malatang** and **Bobo Chicken (钵钵鸡)**.
+This repository is the **Forge 1.20.1** edition.
 
-> 原始 Fabric 版本由 [Xkbsx413](https://github.com/Xkbsx413/boiling-cauldron) 开发，本仓库为其 Forge 移植。
+> The original Fabric version was created by [Xkbsx413](https://github.com/Xkbsx413/boiling-cauldron).
+> This repository is a Forge port of it.
+
+[中文说明](README.zh_cn.md)
 
 ---
 
-## 环境要求
+## Requirements
 
-| 项目 | 版本 |
+| Item | Version |
 |---|---|
 | Minecraft | 1.20.1 |
-| Forge | 47.3.0 及以上（开发使用 47.4.0） |
+| Forge | 47.3.0 or newer (47.4.0 used for development) |
 | Java | 17 |
-| 前置模组 | [森罗厨房 Kaleidoscope Cookery](https://modrinth.com/mod/kaleidoscope-cookery) `1.0.1-forge+mc1.20.1` |
+| Required dependency | [Kaleidoscope Cookery](https://modrinth.com/mod/kaleidoscope-cookery) `1.0.1-forge+mc1.20.1` |
 
-JEI 为**可选**兼容：安装后可在 JEI 中查看「钵钵鸡浸泡」配方；未安装不影响模组运行。
-
----
-
-## 玩法内容
-
-### 食材链
-
-- **四种作物**：生姜、大蒜、贡菜、花椒（4~5 阶段随机生长）
-- **冬笋**：6 阶段，成熟后可用骨粉转为原版竹子
-- **竹根殖块**：定时生成冬笋作物或竹荪菌落，最多同时存在 5 个产物
-- **盛花荷叶**：沼泽 / 红树林沼泽自然生成，成熟后把下方泥土 / 沙子 / 砂砾转为藏藕泥块
-- **藏藕泥块**：铲子右键取 3 个莲藕，普通挖掘掉 1~4 个
-- **繁茂草丛**：多种群系生成，35% 概率掉落随机作物种子
-
-种子获取途径：村庄箱子（按村庄类型主题投放 + 8% 调料包）、流浪商人交易、繁茂草丛掉落。
-
-### 底料与钵钵鸡
-
-1. 用森罗厨房的**炒锅**把材料炒成三种底料：菌菇底料、麻辣底料、藤椒底料
-2. 放下**钵钵鸡锅**（8 红砖 + 1 碗）
-3. 水桶加水 → 放入底料（提供 64 次浸泡额度）
-4. 从 GUI 放入食物，每格独立浸泡 60 秒
-5. 取出得到**钵钵鸡**，食用获得对应口味效果
-
-口味、可用次数、浸泡时长、产物、效果**全部由数据包配方驱动**，可自行扩展。
+JEI is **optional**: if installed, the "Bobo Chicken Soaking" recipe category becomes available.
+The mod works normally without it.
 
 ---
 
-## 自定义配方（数据包）
+## Content
 
-配方类型：`boiling-cauldron:bobo_soak`
+### Ingredients
+
+- **Four crops**: ginger, garlic, gong cai (stem lettuce), Sichuan pepper (4–5 growth stages).
+- **Winter bamboo shoots**: six stages; bone meal on a mature crop turns it into vanilla bamboo.
+- **Bamboo root block**: periodically spawns winter bamboo shoot crops or bamboo fungus colonies,
+  up to five living offspring at a time.
+- **Blooming lotus leaf**: generates naturally in swamps and mangrove swamps; once mature it converts
+  dirt, sand or gravel beneath it into lotus mud.
+- **Lotus mud**: right-click with a shovel for 3 lotus roots; mining drops 1–4.
+- **Lush grass**: generates in many biomes; 35% chance to drop a random crop seed.
+
+Seeds can be obtained from village chests (themed per village type, plus a 8% "seasoning pack" pool),
+from the wandering trader, or from lush grass.
+
+### Bases and Bobo Chicken
+
+1. Use the **wok** from Kaleidoscope Cookery to cook three kinds of soup base:
+   mushroom, mala, and rattan pepper.
+2. Place a **Bobo Chicken Pot** (8 bricks + 1 bowl).
+3. Fill it with a water bucket, then add one soup base (grants 64 soaks).
+4. Put food into the GUI; each slot soaks independently for 60 seconds.
+5. Take the result out to get **Bobo Chicken**; eating it applies the base's effect.
+
+Flavour, uses, soak time, output item and effects are **entirely driven by datapack recipes**,
+so they can be extended freely.
+
+---
+
+## Custom recipes (datapack)
+
+Recipe type: `boiling-cauldron:bobo_soak`
 
 ```json
 {
@@ -67,43 +77,44 @@ JEI 为**可选**兼容：安装后可在 JEI 中查看「钵钵鸡浸泡」配�
 }
 ```
 
-| 字段 | 说明 |
+| Field | Description |
 |---|---|
-| `base` | Ingredient，支持 `item` 或 `tag` |
-| `flavor.id` | 口味唯一 id，写入成品 NBT |
-| `flavor.name` | 显示名，支持 `{"translate":...}` / `{"text":...}` / 纯字符串 |
-| `flavor.sort` | 多口味时的排列顺序，越小越靠前 |
-| `flavor.color` | GUI 中底料名颜色，`#RRGGBB` 或十进制 |
-| `flavor.effects` | 任意数量药水效果 |
-| `soak_time` | 可选，默认 1200 tick（60 秒） |
-| `uses` | 可选，默认 64 次 |
+| `base` | An ingredient; accepts `item` or `tag` |
+| `flavor.id` | Unique flavour id, stored in the item's NBT |
+| `flavor.name` | Display name: `{"translate": ...}`, `{"text": ...}`, or a plain string |
+| `flavor.sort` | Ordering when multiple flavours are combined (lower comes first) |
+| `flavor.color` | Colour of the base name in the GUI, `#RRGGBB` or decimal |
+| `flavor.effects` | Any number of mob effects |
+| `soak_time` | Optional, defaults to 1200 ticks (60 s) |
+| `uses` | Optional, defaults to 64 |
 
-内置 3 条配方位于 `src/generated/resources/data/boiling-cauldron/recipes/bobo_soak/`。
+Three built-in recipes live in
+`src/generated/resources/data/boiling-cauldron/recipes/bobo_soak/`.
 
 ---
 
-## 构建
+## Building
 
 ```bash
 ./gradlew build
 ```
 
-产物：`build/libs/boiling-cauldron-1.0.0-forge.jar`
+Output: `build/libs/boiling-cauldron-1.0.0-forge.jar`
 
-### 数据生成
+### Data generation
 
 ```bash
 ./gradlew runData
 ```
 
-输出到 `src/generated/resources`，该目录已随仓库提交，并通过
-`sourceSets.main.resources { srcDir 'src/generated/resources' }` 参与打包。
+Output goes to `src/generated/resources`, which is committed and included in the build via
+`sourceSets.main.resources { srcDir 'src/generated/resources' }`.
 
-> **注意**：`runData` 会启动 Minecraft 引导流程并校验强制依赖。
-> 若本地未安装森罗厨房，需临时注释 `src/main/resources/META-INF/mods.toml`
-> 中的 `kaleidoscope_cookery` 依赖项后再运行。
+> **Note**: `runData` boots Minecraft and therefore validates mandatory dependencies.
+> Without Kaleidoscope Cookery installed locally, temporarily comment out the
+> `kaleidoscope_cookery` entry in `src/main/resources/META-INF/mods.toml` before running it.
 
-### 开发运行
+### Development runs
 
 ```bash
 ./gradlew runClient
@@ -112,50 +123,49 @@ JEI 为**可选**兼容：安装后可在 JEI 中查看「钵钵鸡浸泡」配�
 
 ---
 
-## 项目结构
+## Project layout
 
 ```
-├── build.gradle                 构建脚本（ForgeGradle 6）
-├── gradle.properties            版本与模组元数据
-├── src/main/java/               源码（41 个类）
+├── build.gradle                 Build script (ForgeGradle 6)
+├── gradle.properties            Versions and mod metadata
+├── src/main/java/               Sources (41 classes)
 │   └── com/boilingcauldron/
-│       ├── block/               方块与方块实体
-│       ├── item/                物品、口味档案
-│       ├── recipe/              自定义配方类型 bobo_soak
-│       ├── screen/              钵钵鸡锅 GUI
-│       ├── datagen/             Forge 数据生成（8 个 Provider）
-│       ├── loot/ trade/ tag/    战利品注入、交易、标签
-│       └── compat/jei/          JEI 兼容（可选）
-├── src/main/resources/          手写资源（贴图、模型、mods.toml）
-├── src/generated/resources/     数据生成输出（已提交）
-└── docs/                        设计与移植文档
+│       ├── block/               Blocks and block entities
+│       ├── item/                Items and flavour profiles
+│       ├── recipe/              Custom recipe type bobo_soak
+│       ├── screen/              Bobo Chicken Pot GUI
+│       ├── datagen/             Forge data generation (8 providers)
+│       ├── loot/ trade/ tag/    Loot injection, trades, tags
+│       └── compat/jei/          Optional JEI integration
+├── src/main/resources/          Hand-written assets (textures, models, mods.toml)
+├── src/generated/resources/     Data generation output (committed)
+└── docs/                        Design and porting documents
 ```
 
 ---
 
-## 文档
+## Documentation
 
-- [设计文档](docs/design.md)：玩法规则定稿
-- [移植报告](docs/porting-report.md)：Fabric → Forge 的对照、验证记录与已知限制
-- [源码分析](docs/source-analysis.md)：对原始 Fabric 版本的分析
+- [Design document](docs/design.md) — finalised gameplay rules (Chinese)
+- [Porting report](docs/porting-report.md) — Fabric → Forge mapping, verification, known limits (Chinese)
+- [Source analysis](docs/source-analysis.md) — analysis of the original Fabric version (Chinese)
 
 ---
 
-## 许可证
+## Licence
 
-本项目采用**双授权**：
+Dual-licensed:
 
-| 范围 | 协议 | 文件 |
+| Scope | Licence | File |
 |---|---|---|
-| 源代码、构建脚本、文档 | **MIT** | [LICENSE](LICENSE) |
-| 游戏资源（贴图、模型、语言、配方、掉落表、标签、世界生成） | **CC0-1.0** | [LICENSE-ASSETS](LICENSE-ASSETS) |
+| Source code, build scripts, documentation | **MIT** | [LICENSE](LICENSE) |
+| Game assets (textures, models, language files, recipes, loot tables, tags, worldgen) | **CC0-1.0** | [LICENSE-ASSETS](LICENSE-ASSETS) |
 
-划分细则见 [LICENSING.md](LICENSING.md)。
+See [LICENSING.md](LICENSING.md) for the exact file split, and [NOTICE](NOTICE) for attribution.
 
-第三方内容（森罗厨房 / Minecraft / Forge）不在此授权范围内。
+Third-party content (Kaleidoscope Cookery, Minecraft, Forge) is not covered by these licences.
 
-## 致谢
+## Credits
 
-- 原作者 [Xkbsx413](https://github.com/Xkbsx413/boiling-cauldron) 及美术
-- Forge 移植：[adeahejshshsh](https://github.com/adeahejshshsh)
-- [森罗厨房 Kaleidoscope Cookery](https://github.com/KaleidoscopeMods/KaleidoscopeCookery) 团队
+- Original author: [Xkbsx413](https://github.com/Xkbsx413/boiling-cauldron) and the artists
+- Forge port: [adeahejshshsh](https://github.com/adeahejshshsh)

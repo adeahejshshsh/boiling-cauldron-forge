@@ -1,50 +1,58 @@
-沸鼎烟火（Boiling Cauldron）· Forge 版
+Boiling Cauldron (沸鼎烟火) — Forge Edition
 NOTICE
 
-本文件记录版权归属与来源，许可证正文见 LICENSE 与 LICENSE-ASSETS。
+This file records copyright and provenance. The licence texts themselves are in
+LICENSE and LICENSE-ASSETS.
+
+[中文备份](NOTICE.zh_cn.md)
 
 --------------------------------------------------------------------------------
 
-源代码：MIT License
+Source code: MIT License
     Copyright (c) 2026 adeahejshshsh
 
-    完整条款见 LICENSE。
+    See LICENSE for the full terms.
 
-游戏资源：CC0 1.0 Universal（公有领域）
-    完整条款见 LICENSE-ASSETS。
+Game assets: CC0 1.0 Universal (public domain)
+    See LICENSE-ASSETS for the full terms.
 
 --------------------------------------------------------------------------------
 
-来源说明
+Provenance
 
-本项目的部分内容源自 "Boiling Cauldron（沸鼎烟火）" 原始 Fabric 版本，
-作者为 Xkbsx413 及其画师团队，原项目以 CC0-1.0 发布（公有领域）：
+Parts of this project are derived from the original Fabric version of
+"Boiling Cauldron (沸鼎烟火)", created by Xkbsx413 and the artist team and
+released under CC0-1.0 (public domain):
+
     https://github.com/Xkbsx413/boiling-cauldron
 
-因原项目为公有领域，本移植版得以将源代码部分重新以 MIT 分发。
-原始项目的作者与画师对本案的贡献在此致谢。
+Because the original is public domain, this port is able to distribute the
+source-code portion under MIT. The original authors and artists are gratefully
+acknowledged.
 
 --------------------------------------------------------------------------------
 
-第三方内容
+Third-party content
 
-本项目未打包任何第三方模组的代码或资源。以下仅为互操作引用：
+This project does not bundle any third-party mod code or assets. The following
+are interoperability references only:
 
-    森罗厨房（Kaleidoscope Cookery）
-        配方类型 kaleidoscope_cookery:pot
-        物品标签 kaleidoscope_cookery:pot_ingredient
-        物品 ID   kaleidoscope_cookery:oil_block
-        标签      forge:crops/chilipepper
-        该模组代码为 BSD-3-Clause、资源为 CC BY-NC-SA 4.0，
-        其授权不适用于本项目。
+    Kaleidoscope Cookery
+        recipe type  kaleidoscope_cookery:pot
+        item tag     kaleidoscope_cookery:pot_ingredient
+        item id      kaleidoscope_cookery:oil_block
+        tag          forge:crops/chilipepper
+        That mod is BSD-3-Clause (code) and CC BY-NC-SA 4.0 (assets);
+        its terms do not apply to this project.
 
     Minecraft / Minecraft Forge
-        版权所有 Mojang Studios 与 Forge 开发团队。
-        本项目的 MIT / CC0 声明不覆盖它们。
+        Copyright Mojang Studios and the Forge team.
+        The MIT / CC0 grants here do not cover them.
 
 --------------------------------------------------------------------------------
 
-声明
+Notice
 
-本项目的 MIT / CC0 授权仅覆盖本仓库中由本项目作者创作的部分。
-使用者应自行确认其使用场景是否符合所在地法律及相关第三方条款。
+The MIT / CC0 grants in this project cover only the portions created by this
+project's authors. Users are responsible for confirming that their intended use
+complies with applicable law and with any third-party terms.

@@ -37,3 +37,6 @@ libs/
 
 # 数据生成缓存（生成结果本身需要提交）
 src/generated/resources/.cache/
+
+#其他
+release/
