@@ -148,4 +148,5 @@ JEI 为**可选**兼容：安装后可在 JEI 中查看「钵钵鸡浸泡」配�
 ## 致谢
 
 - 原作者 [Xkbsx413](https://github.com/Xkbsx413/boiling-cauldron) 及美术
+- Forge 移植：[adeahejshshsh](https://github.com/adeahejshshsh)
 - [森罗厨房 Kaleidoscope Cookery](https://github.com/KaleidoscopeMods/KaleidoscopeCookery) 团队

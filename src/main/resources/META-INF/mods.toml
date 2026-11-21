@@ -7,7 +7,7 @@ modId = "boilingcauldron"
 version = "1.0.0-forge"
 namespace = "boiling-cauldron"
 displayName = "沸鼎烟火"
-authors = "Xkbsx413和他可敬的画师们"
+authors = "Xkbsx413和他可敬的画师们, adeahejshshsh"
 description = '''以麻辣烫、钵钵鸡为主题的 Forge 烹饪模组。
 需要前置模组：森罗厨房（Kaleidoscope Cookery）。'''
 logoFile = "icon.png"
