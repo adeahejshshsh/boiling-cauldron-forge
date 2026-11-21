@@ -143,7 +143,16 @@ JEI 为**可选**兼容：安装后可在 JEI 中查看「钵钵鸡浸泡」配�
 
 ## 许可证
 
-本项目基于 **CC0-1.0**，详见 [LICENSE](LICENSE)。
+本项目采用**双授权**：
+
+| 范围 | 协议 | 文件 |
+|---|---|---|
+| 源代码、构建脚本、文档 | **MIT** | [LICENSE](LICENSE) |
+| 游戏资源（贴图、模型、语言、配方、掉落表、标签、世界生成） | **CC0-1.0** | [LICENSE-ASSETS](LICENSE-ASSETS) |
+
+划分细则见 [LICENSING.md](LICENSING.md)。
+
+第三方内容（森罗厨房 / Minecraft / Forge）不在此授权范围内。
 
 ## 致谢
 
