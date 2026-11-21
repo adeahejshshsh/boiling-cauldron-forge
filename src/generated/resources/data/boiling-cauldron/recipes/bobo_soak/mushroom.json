@@ -1,0 +1,26 @@
+{
+  "type": "boiling-cauldron:bobo_soak",
+  "base": {
+    "item": "boiling-cauldron:mushroom_base"
+  },
+  "flavor": {
+    "color": "#C77B3E",
+    "effects": [
+      {
+        "amplifier": 0,
+        "duration": 600,
+        "effect": "minecraft:regeneration"
+      }
+    ],
+    "id": "mushroom",
+    "name": {
+      "translate": "tooltip.boiling-cauldron.bobo_chicken.flavor.mushroom"
+    },
+    "sort": 0
+  },
+  "result": {
+    "item": "boiling-cauldron:bobo_chicken"
+  },
+  "soak_time": 1200,
+  "uses": 64
+}

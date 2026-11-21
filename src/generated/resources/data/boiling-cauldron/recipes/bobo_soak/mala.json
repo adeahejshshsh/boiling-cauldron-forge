@@ -1,0 +1,26 @@
+{
+  "type": "boiling-cauldron:bobo_soak",
+  "base": {
+    "item": "boiling-cauldron:mala_base"
+  },
+  "flavor": {
+    "color": "#E03A2F",
+    "effects": [
+      {
+        "amplifier": 0,
+        "duration": 600,
+        "effect": "minecraft:strength"
+      }
+    ],
+    "id": "mala",
+    "name": {
+      "translate": "tooltip.boiling-cauldron.bobo_chicken.flavor.mala"
+    },
+    "sort": 1
+  },
+  "result": {
+    "item": "boiling-cauldron:bobo_chicken"
+  },
+  "soak_time": 1200,
+  "uses": 64
+}

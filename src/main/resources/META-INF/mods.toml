@@ -1,0 +1,34 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "CC0-1.0"
+
+[[mods]]
+modId = "boilingcauldron"
+version = "1.0.0-forge"
+namespace = "boiling-cauldron"
+displayName = "沸鼎烟火"
+authors = "Xkbsx413和他可敬的画师们"
+description = '''以麻辣烫、钵钵鸡为主题的 Forge 烹饪模组。
+需要前置模组：森罗厨房（Kaleidoscope Cookery）。'''
+logoFile = "icon.png"
+
+[[dependencies."boilingcauldron"]]
+modId = "forge"
+mandatory = true
+versionRange = "[47.3.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."boilingcauldron"]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,1.21)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."boilingcauldron"]]
+modId = "kaleidoscope_cookery"
+mandatory = true
+versionRange = "[1.0.1,)"
+ordering = "NONE"
+side = "BOTH"

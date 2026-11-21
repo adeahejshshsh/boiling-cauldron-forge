@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:brick"
+    },
+    "T": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BTB",
+    "BBB"
+  ],
+  "result": {
+    "item": "boiling-cauldron:bobo_chicken_pot"
+  },
+  "show_notification": true
+}
