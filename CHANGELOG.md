@@ -4,6 +4,19 @@ All notable changes to this project are documented here.
 
 [中文备份](CHANGELOG.zh_cn.md)
 
+## 1.0.1-forge (2026-11-21)
+
+### Fixes
+
+- **Item tooltips did not appear in the Bobo Chicken Pot GUI** — `AbstractContainerScreen`
+  never renders tooltips on its own; each container screen must call `renderTooltip` from
+  its `render` override. Vanilla `ContainerScreen` does exactly that. Hovering a slot now
+  shows the item name and the flavour information, matching the inventory screen.
+
+### Notes
+
+- Version number bumped to `1.0.1-forge` (`gradle.properties` + `mods.toml`).
+
 ## 1.0.0-forge (2026-11-21)
 
 First Forge 1.20.1 release, ported from the Fabric 1.0.0 version.

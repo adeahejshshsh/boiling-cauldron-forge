@@ -4,7 +4,7 @@ license = "MIT (code) + CC0-1.0 (assets)"
 
 [[mods]]
 modId = "boilingcauldron"
-version = "1.0.0-forge"
+version = "1.0.1-forge"
 namespace = "boiling-cauldron"
 displayName = "沸鼎烟火"
 authors = "Xkbsx413和他可敬的画师们, adeahejshshsh"

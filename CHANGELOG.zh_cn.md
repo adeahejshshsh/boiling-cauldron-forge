@@ -2,6 +2,18 @@
 
 > 本文为中文备份，英文版见 [English](CHANGELOG.md)
 
+## 1.0.1-forge（2026-11-21）
+
+### 修复
+
+- **钵钵鸡锅界面中物品悬浮提示不显示** —— `AbstractContainerScreen` 本身不渲染 tooltip，
+  需要每个容器界面在自己的 `render` 里调用 `renderTooltip`；原版 `ContainerScreen` 就是这么做的。
+  现在鼠标悬浮槽位会显示物品名称与口味信息，与背包界面一致。
+
+### 说明
+
+- 版本号提升至 `1.0.1-forge`（`gradle.properties` + `mods.toml`）。
+
 ## 1.0.0-forge（2026-11-21）
 
 首个 Forge 1.20.1 版本，基于 Fabric 1.0.0 移植。

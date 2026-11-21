@@ -35,6 +35,14 @@ public class BoboChickenPotScreen extends AbstractContainerScreen<BoboChickenPot
         this.titleLabelX = (this.imageWidth - this.font.width(this.title)) / 2;
     }
 
+
+    @Override
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
+        super.render(guiGraphics, mouseX, mouseY, partialTick);
+        // AbstractContainerScreen 不会自动渲染 tooltip，必须由子类显式调用
+        this.renderTooltip(guiGraphics, mouseX, mouseY);
+    }
+
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
         guiGraphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
