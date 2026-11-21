@@ -2,6 +2,10 @@
 
 本项目采用**双授权**：源代码与游戏资源分别适用不同协议。
 
+> 版权归属与来源记录见 [NOTICE](NOTICE)。
+> `LICENSE` 保持 MIT 标准模板原文，不做任何改写——GitHub 通过精确模板匹配识别许可证，
+> 任何附加段落都会导致其把协议识别为 "Other"。
+
 ## 源代码 —— MIT License
 
 以下内容适用 [LICENSE](LICENSE)（MIT）：
