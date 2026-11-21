@@ -1,0 +1,58 @@
+Boiling Cauldron (沸鼎烟火) — Forge Edition
+NOTICE
+
+This file records copyright and provenance. The licence texts themselves are in
+LICENSE and LICENSE-ASSETS.
+
+[中文备份](NOTICE.zh_cn.md)
+
+--------------------------------------------------------------------------------
+
+Source code: MIT License
+    Copyright (c) 2026 adeahejshshsh
+
+    See LICENSE for the full terms.
+
+Game assets: CC0 1.0 Universal (public domain)
+    See LICENSE-ASSETS for the full terms.
+
+--------------------------------------------------------------------------------
+
+Provenance
+
+Parts of this project are derived from the original Fabric version of
+"Boiling Cauldron (沸鼎烟火)", created by Xkbsx413 and the artist team and
+released under CC0-1.0 (public domain):
+
+    https://github.com/Xkbsx413/boiling-cauldron
+
+Because the original is public domain, this port is able to distribute the
+source-code portion under MIT. The original authors and artists are gratefully
+acknowledged.
+
+--------------------------------------------------------------------------------
+
+Third-party content
+
+This project does not bundle any third-party mod code or assets. The following
+are interoperability references only:
+
+    Kaleidoscope Cookery
+        recipe type  kaleidoscope_cookery:pot
+        item tag     kaleidoscope_cookery:pot_ingredient
+        item id      kaleidoscope_cookery:oil_block
+        tag          forge:crops/chilipepper
+        That mod is BSD-3-Clause (code) and CC BY-NC-SA 4.0 (assets);
+        its terms do not apply to this project.
+
+    Minecraft / Minecraft Forge
+        Copyright Mojang Studios and the Forge team.
+        The MIT / CC0 grants here do not cover them.
+
+--------------------------------------------------------------------------------
+
+Notice
+
+The MIT / CC0 grants in this project cover only the portions created by this
+project's authors. Users are responsible for confirming that their intended use
+complies with applicable law and with any third-party terms.

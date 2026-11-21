@@ -1,0 +1,42 @@
+# gradle
+.gradle/
+build/
+out/
+classes/
+
+# 运行目录（开发用）
+run/
+runs/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+bin/
+.classpath
+.project
+
+# macOS
+*.DS_Store
+
+# 日志与崩溃
+logs/
+*.log
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# 构建产物
+libs/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# 数据生成缓存（生成结果本身需要提交）
+src/generated/resources/.cache/
+
+# ModDevGradle 中间产物
+build/moddev/

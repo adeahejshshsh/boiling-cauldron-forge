@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "boiling-cauldron:sichuan_pepper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "boiling-cauldron:sichuan_pepper_seeds"
+  }
+}

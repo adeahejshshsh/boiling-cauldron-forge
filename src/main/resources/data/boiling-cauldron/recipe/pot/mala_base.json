@@ -1,0 +1,23 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "boiling-cauldron:sichuan_pepper"
+    },
+    {
+      "tag": "forge:crops/chilipepper"
+    },
+    {
+      "item": "boiling-cauldron:garlic"
+    },
+    {
+      "item": "kaleidoscope_cookery:oil_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "boiling-cauldron:mala_base"
+  },
+  "stir_fry_count": 3,
+  "time": 200
+}

@@ -1,0 +1,29 @@
+{
+  "type": "boiling-cauldron:bobo_soak",
+  "base": {
+    "item": "boiling-cauldron:rattan_pepper_base"
+  },
+  "flavor": {
+    "color": 6270527,
+    "effects": [
+      {
+        "duration": 600,
+        "id": "minecraft:resistance",
+        "neoforge:cures": [
+          "milk",
+          "protected_by_totem"
+        ],
+        "show_icon": true
+      }
+    ],
+    "id": "rattan_pepper",
+    "name": {
+      "translate": "tooltip.boiling-cauldron.bobo_chicken.flavor.rattan_pepper"
+    },
+    "sort": 2
+  },
+  "result": {
+    "count": 1,
+    "id": "boiling-cauldron:bobo_chicken"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "boiling-cauldron:gong_cai"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "boiling-cauldron:gong_cai_seeds"
+  }
+}

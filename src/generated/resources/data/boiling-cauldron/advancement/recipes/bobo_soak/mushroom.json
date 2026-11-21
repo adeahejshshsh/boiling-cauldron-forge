@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mushroom": {
+      "conditions": {
+        "items": [
+          {
+            "items": "boiling-cauldron:mushroom_base"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_mushroom"
+    ]
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "boiling-cauldron:bobo_soak",
+  "base": {
+    "item": "boiling-cauldron:mala_base"
+  },
+  "flavor": {
+    "color": 14694959,
+    "effects": [
+      {
+        "duration": 600,
+        "id": "minecraft:strength",
+        "neoforge:cures": [
+          "milk",
+          "protected_by_totem"
+        ],
+        "show_icon": true
+      }
+    ],
+    "id": "mala",
+    "name": {
+      "translate": "tooltip.boiling-cauldron.bobo_chicken.flavor.mala"
+    },
+    "sort": 1
+  },
+  "result": {
+    "count": 1,
+    "id": "boiling-cauldron:bobo_chicken"
+  }
+}
