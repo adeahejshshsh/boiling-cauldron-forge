@@ -19,6 +19,14 @@ repositories {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com'
     }
+    // Jade 由作者发布在 Modrinth，没有独立 maven
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
 }
 
 neoForge {
@@ -54,6 +62,9 @@ neoForge {
 dependencies {
     // JEI 仅编译期依赖；未安装 JEI 的客户端不会加载 compat.jei 包
     compileOnly "mezz.jei:jei-1.21.1-neoforge:${jei_version}"
+
+    // Jade 同样仅编译期依赖；未安装时 compat.jade 包不会被加载
+    compileOnly "maven.modrinth:jade:${jade_version}"
 }
 
 tasks.withType(JavaCompile).configureEach {
