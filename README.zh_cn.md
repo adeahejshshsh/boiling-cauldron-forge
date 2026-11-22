@@ -21,6 +21,8 @@
 
 JEI 为**可选**：安装后会出现「钵钵鸡浸泡」配方分类，不装也能正常游玩。
 
+
+Jade 同样为**可选**：安装后三个功能方块（竹根殖块、盛花荷叶、钵钵鸡锅）会在 Jade 浮层中显示实时状态。
 ---
 
 ## 内容
@@ -96,7 +98,7 @@ JEI 为**可选**：安装后会出现「钵钵鸡浸泡」配方分类，不装
 ./gradlew build
 ```
 
-产物：`build/libs/boiling-cauldron-1.0.1-neoforge.jar`
+产物：`build/libs/boiling-cauldron-1.0.2-neoforge.jar`
 
 ### 数据生成
 

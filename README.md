@@ -20,7 +20,11 @@ This repository is the **NeoForge 1.21.1** edition.
 | Required dependency | [Kaleidoscope Cookery](https://modrinth.com/mod/kaleidoscope-cookery) `1.0.1+` (NeoForge build) |
 
 JEI is **optional**: if installed, the "Bobo Chicken Soaking" recipe category becomes available.
-The mod works normally without it.
+
+Jade is **optional** too: if installed, the three functional blocks (bamboo root, blooming lotus
+leaf, bobo chicken pot) show their live state in the Jade overlay.
+
+The mod works normally without either of them.
 
 ---
 
@@ -103,7 +107,7 @@ Three built-in recipes live in
 ./gradlew build
 ```
 
-Output: `build/libs/boiling-cauldron-1.0.1-neoforge.jar`
+Output: `build/libs/boiling-cauldron-1.0.2-neoforge.jar`
 
 ### Data generation
 
