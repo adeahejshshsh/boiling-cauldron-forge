@@ -19,6 +19,8 @@
 
 JEI 为**可选**兼容：安装后可在 JEI 中查看「钵钵鸡浸泡」配方；未安装不影响模组运行。
 
+Jade 同样为**可选**：安装后三个功能方块（竹根殖块、盛花荷叶、钵钵鸡锅）会在 Jade 浮层中显示实时状态。
+
 ---
 
 ## 玩法内容
@@ -90,7 +92,7 @@ JEI 为**可选**兼容：安装后可在 JEI 中查看「钵钵鸡浸泡」配�
 ./gradlew build
 ```
 
-产物：`build/libs/boiling-cauldron-1.0.0-forge.jar`
+产物：`build/libs/boiling-cauldron-1.0.2-forge.jar`
 
 ### 数据生成
 

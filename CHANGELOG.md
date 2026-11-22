@@ -4,6 +4,16 @@ All notable changes to this project are documented here.
 
 [中文备份](CHANGELOG.zh_cn.md)
 
+## 1.0.2-forge (2026-11-22)
+
+### New
+
+- **Jade support** — the three functional blocks now show their state in Jade tooltips:
+  - Bamboo Root: current alive offspring / 5
+  - Blooming Lotus Leaf: growth stage / 4, plus a hint when it is converting the block below
+  - Bobo Chicken Pot: water status, base name, uses left, and how many slots are soaking
+- Jade is an **optional** dependency; without it the tooltips simply do not appear
+
 ## 1.0.1-forge (2026-11-21)
 
 ### Fixes

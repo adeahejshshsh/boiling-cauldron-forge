@@ -20,7 +20,11 @@ This repository is the **Forge 1.20.1** edition.
 | Required dependency | [Kaleidoscope Cookery](https://modrinth.com/mod/kaleidoscope-cookery) `1.0.1-forge+mc1.20.1` |
 
 JEI is **optional**: if installed, the "Bobo Chicken Soaking" recipe category becomes available.
-The mod works normally without it.
+
+Jade is **optional** too: if installed, the three functional blocks (bamboo root, blooming lotus
+leaf, bobo chicken pot) show their live state in the Jade overlay.
+
+The mod works normally without either of them.
 
 ---
 
@@ -99,7 +103,7 @@ Three built-in recipes live in
 ./gradlew build
 ```
 
-Output: `build/libs/boiling-cauldron-1.0.0-forge.jar`
+Output: `build/libs/boiling-cauldron-1.0.2-forge.jar`
 
 ### Data generation
 
