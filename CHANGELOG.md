@@ -4,6 +4,20 @@ All notable changes to this project are documented here.
 
 [中文备份](CHANGELOG.zh_cn.md)
 
+## 1.0.3-forge (2026-11-22)
+
+### New
+
+- **JEI "where to find it" info pages** — 9 entries covering natural generation and
+  world-acquisition routes:
+  - Lush Grass, Blooming Lotus Leaf (the two naturally generating blocks)
+  - Lotus Mud, Bamboo Root, Bamboo Fungus Colony (derived from world mechanics)
+  - Winter Bamboo Shoots, Lotus Root, Bamboo Fungus (products)
+  - The four seeds (one entry: grass drops / village chests / wandering trader)
+
+  Biome lists and probabilities are taken from the actual worldgen and loot data,
+  not estimated.
+
 ## 1.0.2-forge (2026-11-22)
 
 ### New
