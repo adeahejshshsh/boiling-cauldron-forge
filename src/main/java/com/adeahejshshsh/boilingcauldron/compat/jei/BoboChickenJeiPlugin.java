@@ -35,6 +35,9 @@ public class BoboChickenJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
+        // 自然生成物的「去哪里找」说明，与是否有自定义配方无关，先注册
+        ModJeiInfo.register(registration);
+
         List<BoboSoakRecipe> recipes = collectRecipes();
         if (recipes.isEmpty()) {
             return;

@@ -4,6 +4,33 @@ All notable changes to this project are documented here.
 
 [中文备份](CHANGELOG.zh_cn.md)
 
+## 1.0.3-neoforge (2026-11-22)
+
+### New
+
+- **JEI "where to find it" info pages** — 9 entries covering natural generation and
+  world-acquisition routes:
+  - Lush Grass, Blooming Lotus Leaf (the two naturally generating blocks)
+  - Lotus Mud, Bamboo Root, Bamboo Fungus Colony (derived from world mechanics)
+  - Winter Bamboo Shoots, Lotus Root, Bamboo Fungus (products)
+  - The four seeds (one entry: grass drops / village chests / wandering trader)
+
+  Biome lists and probabilities are taken from the actual worldgen and loot data,
+  not estimated.
+
+### Fixes
+
+- **Natural generation never worked** — `biome_modifier` still used the Forge 1.20.1
+  path and namespace:
+  - path `data/boiling-cauldron/forge/biome_modifier/` should be `neoforge/biome_modifier/`
+  - type `forge:add_features` should be `neoforge:add_features`
+
+  NeoForge 1.20.2+ renamed its own registry namespace from `forge:` to `neoforge:`,
+  so the old path was never loaded. As a result **Lush Grass and Blooming Lotus Leaf
+  have never generated naturally in the NeoForge build**.
+- **Kaleidoscope Cookery chili tag** — `forge:crops/chilipepper` → `c:crops/chilipepper`.
+  NeoForge common tags use the `c:` namespace; the old form broke the mala base recipe.
+
 ## 1.0.2-neoforge (2026-11-22)
 
 ### New

@@ -2,6 +2,28 @@
 
 > 本文为中文备份，英文版见 [English](CHANGELOG.md)
 
+## 1.0.3-neoforge（2026-11-22）
+
+### 新增
+
+- **JEI「去哪里找」说明页** —— 9 条自然生成/野外获取途径说明：
+  - 繁茂草丛、盛花荷叶（自然生成的两个方块）
+  - 藏藕泥块、竹根殖块、竹荪菌落（由世界机制衍生）
+  - 冬笋、莲藕、竹荪（产物）
+  - 四种种子（合并为一条，说明草丛掉落 / 村庄箱子 / 流浪商人三种途径）
+  文案中的群系列表与概率均取自实际 worldgen 与战利品数据，不是估计值。
+
+### 修复
+
+- **自然生成完全不生效** —— `biome_modifier` 沿用了 Forge 1.20.1 的路径与命名空间：
+  - 路径 `data/boiling-cauldron/forge/biome_modifier/` → 应为 `neoforge/biome_modifier/`
+  - 类型 `forge:add_features` → 应为 `neoforge:add_features`
+
+  NeoForge 1.20.2+ 已把自身注册表命名空间从 `forge:` 改为 `neoforge:`，
+  旧路径不会被加载。结果是**繁茂草丛与盛花荷叶在 NeoForge 版里从未自然生成过**。
+- **森罗厨房辣椒标签** —— `forge:crops/chilipepper` → `c:crops/chilipepper`。
+  NeoForge 的通用标签用 `c:` 命名空间，旧写法会让麻辣底料配方失效。
+
 ## 1.0.2-neoforge（2026-11-22）
 
 ### 新增
