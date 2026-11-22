@@ -76,6 +76,9 @@ dependencies {
 
     // JEI 仅编译期依赖：未安装 JEI 的客户端不会加载 compat.jei 包
     compileOnly fg.deobf("mezz.jei:jei-1.20.1-forge:${jei_version}")
+
+    // Jade 同样仅编译期依赖；未安装时 compat.jade 包不会被加载
+    compileOnly fg.deobf("maven.modrinth:jade:${jade_version}")
 }
 
 tasks.withType(JavaCompile).configureEach {

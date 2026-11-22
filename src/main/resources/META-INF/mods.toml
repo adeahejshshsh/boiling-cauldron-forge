@@ -32,3 +32,11 @@ mandatory = true
 versionRange = "[1.0.1,)"
 ordering = "NONE"
 side = "BOTH"
+
+# 可选：安装 Jade 后功能方块会显示状态信息
+[[dependencies."${mod_id}"]]
+modId = "jade"
+mandatory = false
+versionRange = "[11.0.0,)"
+ordering = "NONE"
+side = "BOTH"

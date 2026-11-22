@@ -80,6 +80,15 @@ public class ModLanguageProvider extends LanguageProvider {
         add("jei.boiling-cauldron.bobo_soak.uses", "可用 %s 次");
         add("item.boiling-cauldron.bobo_chicken.suffix", "的钵钵鸡");
         add("item.boiling-cauldron.bobo_chicken.joiner", "");
+        add("jade.boiling-cauldron.bamboo_root.count", "存活产物：%s / %s");
+        add("jade.boiling-cauldron.blooming_lotus_leaf.growth", "生长阶段：%s / %s");
+        add("jade.boiling-cauldron.blooming_lotus_leaf.mature", "已成熟，正在转化下方方块");
+        add("jade.boiling-cauldron.bobo_chicken_pot.water", "水：%s");
+        add("jade.boiling-cauldron.bobo_chicken_pot.water.filled", "已注入");
+        add("jade.boiling-cauldron.bobo_chicken_pot.water.empty", "未注入");
+        add("jade.boiling-cauldron.bobo_chicken_pot.base", "底料：%s");
+        add("jade.boiling-cauldron.bobo_chicken_pot.uses", "剩余次数：%s");
+        add("jade.boiling-cauldron.bobo_chicken_pot.soaking", "浸泡中：%s 格");
     }
 
     private void addEnUs() {
@@ -135,5 +144,14 @@ public class ModLanguageProvider extends LanguageProvider {
         add("jei.boiling-cauldron.bobo_soak.uses", "%s uses");
         add("item.boiling-cauldron.bobo_chicken.suffix", " Bobo Chicken");
         add("item.boiling-cauldron.bobo_chicken.joiner", "-");
+        add("jade.boiling-cauldron.bamboo_root.count", "Alive offspring: %s / %s");
+        add("jade.boiling-cauldron.blooming_lotus_leaf.growth", "Growth: %s / %s");
+        add("jade.boiling-cauldron.blooming_lotus_leaf.mature", "Mature - converting the block below");
+        add("jade.boiling-cauldron.bobo_chicken_pot.water", "Water: %s");
+        add("jade.boiling-cauldron.bobo_chicken_pot.water.filled", "filled");
+        add("jade.boiling-cauldron.bobo_chicken_pot.water.empty", "empty");
+        add("jade.boiling-cauldron.bobo_chicken_pot.base", "Base: %s");
+        add("jade.boiling-cauldron.bobo_chicken_pot.uses", "Uses left: %s");
+        add("jade.boiling-cauldron.bobo_chicken_pot.soaking", "Soaking: %s slot(s)");
     }
 }
