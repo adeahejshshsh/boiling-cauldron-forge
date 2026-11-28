@@ -1,6 +1,7 @@
 package com.adeahejshshsh.boilingcauldron;
 
 import com.adeahejshshsh.boilingcauldron.screen.BoboChickenPotScreen;
+import com.adeahejshshsh.boilingcauldron.screen.MalatangPotScreen;
 import com.adeahejshshsh.boilingcauldron.screen.ModMenus;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.api.distmarker.Dist;
@@ -23,6 +24,7 @@ public final class BoilingCauldronClient {
         @SubscribeEvent
         public static void onRegisterScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenus.BOBO_CHICKEN_POT.get(), BoboChickenPotScreen::new);
+            event.register(ModMenus.MALATANG_POT.get(), MalatangPotScreen::new);
         }
 
         @SubscribeEvent

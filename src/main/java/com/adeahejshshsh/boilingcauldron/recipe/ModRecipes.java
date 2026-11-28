@@ -28,6 +28,10 @@ public class ModRecipes {
     public static final Supplier<RecipeSerializer<BoboSoakRecipe>> BOBO_SOAK_SERIALIZER =
         RECIPE_SERIALIZERS.register("bobo_soak", BoboSoakSerializer::new);
 
+    /** 隐藏成品原料的特殊合成配方 boiling-cauldron:mask_dish */
+    public static final Supplier<RecipeSerializer<MaskDishRecipe>> MASK_DISH_SERIALIZER =
+        RECIPE_SERIALIZERS.register("mask_dish", MaskDishSerializer::new);
+
     public static void register(IEventBus modBus) {
         RECIPE_TYPES.register(modBus);
         RECIPE_SERIALIZERS.register(modBus);
@@ -44,6 +48,20 @@ public class ModRecipes {
         @Override
         public StreamCodec<RegistryFriendlyByteBuf, BoboSoakRecipe> streamCodec() {
             return BoboSoakRecipe.STREAM_CODEC;
+        }
+    }
+
+    /** mask_dish 序列化器：无状态配方，Codec 用 unit。 */
+    public static class MaskDishSerializer implements RecipeSerializer<MaskDishRecipe> {
+
+        @Override
+        public MapCodec<MaskDishRecipe> codec() {
+            return MaskDishRecipe.CODEC;
+        }
+
+        @Override
+        public StreamCodec<RegistryFriendlyByteBuf, MaskDishRecipe> streamCodec() {
+            return MaskDishRecipe.STREAM_CODEC;
         }
     }
 }

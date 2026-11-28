@@ -28,6 +28,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MALA_BASE.get());
         basicItem(ModItems.RATTAN_PEPPER_BASE.get());
         basicItem(ModItems.BOBO_CHICKEN.get());
+        basicItem(ModItems.MALATANG_BOWL.get());
+        basicItem(ModItems.PHANTOM_FIVE_SPICE_POWDER.get());
 
         basicItem(ModItems.GINGER_SEEDS.get());
         basicItem(ModItems.GARLIC_SEEDS.get());

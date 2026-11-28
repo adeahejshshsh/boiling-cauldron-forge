@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "boiling-cauldron:sichuan_pepper" },
+    { "item": "boiling-cauldron:ginger" },
+    { "item": "boiling-cauldron:garlic" },
+    { "item": "minecraft:sugar" },
+    { "item": "minecraft:glow_ink_sac" },
+    { "tag": "boiling-cauldron:dyes" }
+  ],
+  "result": { "count": 1, "id": "boiling-cauldron:phantom_five_spice_powder" }
+}

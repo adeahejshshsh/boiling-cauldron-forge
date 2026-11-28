@@ -38,6 +38,14 @@ public class ModItems {
     public static final DeferredItem<Item> BOBO_CHICKEN = ITEMS.registerItem("bobo_chicken",
         BoboChickenItem::new, new Item.Properties().food(ModFoods.BOBO_CHICKEN));
 
+    public static final DeferredItem<Item> PHANTOM_FIVE_SPICE_POWDER =
+        ITEMS.registerItem("phantom_five_spice_powder", PhantomFiveSpicePowderItem::new,
+            new Item.Properties());
+
+    /** 麻辣烫成品：堆叠数为 1，饱食度写在数据组件里 */
+    public static final DeferredItem<Item> MALATANG_BOWL = ITEMS.registerItem("malatang_bowl",
+        MalatangBowlItem::new, new Item.Properties().stacksTo(1).food(ModFoods.MALATANG_BOWL));
+
     // 种子
     public static final DeferredItem<Item> GINGER_SEEDS = ITEMS.registerItem("ginger_seeds",
         props -> new SeedItem(ModBlocks.GINGER_CROP.get(), props, "item.boiling-cauldron.ginger_seeds"),

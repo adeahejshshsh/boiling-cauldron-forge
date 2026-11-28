@@ -18,6 +18,10 @@ public class ModMenus {
         MENUS.register("bobo_chicken_pot", () -> IMenuTypeExtension.create(
             (windowId, inventory, data) -> new BoboChickenPotMenu(windowId, inventory, data)));
 
+    public static final Supplier<MenuType<MalatangPotMenu>> MALATANG_POT =
+        MENUS.register("malatang_pot", () -> IMenuTypeExtension.create(
+            (windowId, inventory, data) -> new MalatangPotMenu(windowId, inventory, data)));
+
     public static void register(IEventBus modBus) {
         MENUS.register(modBus);
     }

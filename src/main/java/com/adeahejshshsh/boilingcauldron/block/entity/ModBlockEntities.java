@@ -29,6 +29,11 @@ public class ModBlockEntities {
             .of(BoboChickenPotBlockEntity::new, ModBlocks.BOBO_CHICKEN_POT.get())
             .build(null));
 
+    public static final Supplier<BlockEntityType<MalatangPotBlockEntity>> MALATANG_POT =
+        BLOCK_ENTITIES.register("malatang_pot", () -> BlockEntityType.Builder
+            .of(MalatangPotBlockEntity::new, ModBlocks.MALATANG_POT.get())
+            .build(null));
+
     public static void register(IEventBus modBus) {
         BLOCK_ENTITIES.register(modBus);
     }

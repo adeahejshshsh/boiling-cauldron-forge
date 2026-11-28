@@ -42,6 +42,9 @@ public class ModCreativeTabs {
                 output.accept(ModItems.SICHUAN_PEPPER_SEEDS.get());
                 output.accept(ModBlocks.BOBO_CHICKEN_POT.get());
                 output.accept(ModItems.BOBO_CHICKEN.get());
+                output.accept(ModBlocks.MALATANG_POT.get());
+                output.accept(ModItems.MALATANG_BOWL.get());
+                output.accept(ModItems.PHANTOM_FIVE_SPICE_POWDER.get());
                 output.accept(ModBlocks.LUSH_GRASS.get());
             })
             .build());

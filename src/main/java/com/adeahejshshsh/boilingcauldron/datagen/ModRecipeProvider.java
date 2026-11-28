@@ -5,6 +5,7 @@ import com.adeahejshshsh.boilingcauldron.block.ModBlocks;
 import com.adeahejshshsh.boilingcauldron.item.FlavorProfile;
 import com.adeahejshshsh.boilingcauldron.item.ModItems;
 import com.adeahejshshsh.boilingcauldron.recipe.BoboSoakRecipe;
+import com.adeahejshshsh.boilingcauldron.tag.ModTags;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -57,6 +58,25 @@ public class ModRecipeProvider extends RecipeProvider {
             .define('B', Items.BRICK).define('T', Items.BOWL)
             .unlockedBy("has_brick", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BRICK))
             .save(output, BoilingCauldron.id("bobo_chicken_pot"));
+
+        // 麻辣烫锅：8 红砖 + 1 炼药锅
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MALATANG_POT.get())
+            .pattern("BBB").pattern("BCB").pattern("BBB")
+            .define('B', Items.BRICK).define('C', Items.CAULDRON)
+            .unlockedBy("has_brick", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BRICK))
+            .save(output, BoilingCauldron.id("malatang_pot"));
+
+        // 幻色五香粉：花椒 + 姜 + 蒜 + 糖 + 墨囊 + 任意染料
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PHANTOM_FIVE_SPICE_POWDER.get())
+            .requires(ModItems.SICHUAN_PEPPER.get())
+            .requires(ModItems.GINGER.get())
+            .requires(ModItems.GARLIC.get())
+            .requires(Items.SUGAR)
+            .requires(Items.GLOW_INK_SAC)
+            .requires(ModTags.DYES)
+            .unlockedBy("has_sichuan_pepper",
+                InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.SICHUAN_PEPPER.get()))
+            .save(output, BoilingCauldron.id("phantom_five_spice_powder"));
 
         seedRecipe(output, ModItems.GINGER.get(), ModItems.GINGER_SEEDS.get(), "ginger");
         seedRecipe(output, ModItems.GARLIC.get(), ModItems.GARLIC_SEEDS.get(), "garlic");
