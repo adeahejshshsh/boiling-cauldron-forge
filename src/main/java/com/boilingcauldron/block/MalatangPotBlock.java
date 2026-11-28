@@ -12,6 +12,7 @@ import com.boilingcauldron.item.BoboChickenItem;
 import com.boilingcauldron.item.FlavorProfile;
 import com.boilingcauldron.item.MalatangBowlItem;
 import com.boilingcauldron.screen.MalatangPotMenu;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -27,11 +28,18 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
 
 public class MalatangPotBlock extends AbstractSeasoningPotBlock {
 
     public MalatangPotBlock(Properties properties) {
         super(properties);
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new MalatangPotBlockEntity(pos, state);
     }
 
     @Override

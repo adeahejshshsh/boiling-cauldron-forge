@@ -83,7 +83,7 @@ public class BoboChickenPotScreen extends AbstractContainerScreen<BoboChickenPot
             int row = slot / 4;
             int slotX = BoboChickenPotMenu.POT_SLOT_START_X + col * 18;
             int slotY = BoboChickenPotMenu.POT_SLOT_START_Y + row * 18;
-            int soakTicks = Math.max(1, this.menu.getSoakTicks());
+            int soakTicks = Math.max(1, this.menu.getEffectiveCookingTicks());
             int width = Math.min(16, progress * 16 / soakTicks);
             if (width > 0) {
                 guiGraphics.fill(slotX, slotY + 16, slotX + width, slotY + 18, PROGRESS_COLOR);

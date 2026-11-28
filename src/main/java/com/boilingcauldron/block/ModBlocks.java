@@ -131,7 +131,7 @@ public class ModBlocks {
     /** 麻辣烫锅：16 格热煮容器，正下方需要热源 */
     public static final RegistryObject<Block> MALATANG_POT = register(
         "malatang_pot", () -> new MalatangPotBlock(BlockBehaviour.Properties.of()
-            .mapColor(MapColor.DARK_RED)
+            .mapColor(MapColor.NETHER)
             .strength(1.5F)
             .sound(SoundType.DECORATED_POT)
             .requiresCorrectToolForDrops()

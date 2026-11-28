@@ -24,7 +24,7 @@ public class BoboChickenPotMenu extends AbstractSeasoningPotMenu<BoboChickenPotB
         this(syncId, playerInventory, buf.readBlockPos());
     }
 
-    private BoboChickenPotMenu(int syncId, Inventory playerInventory, BlockPos pos) {
+    public BoboChickenPotMenu(int syncId, Inventory playerInventory, BlockPos pos) {
         this(syncId, playerInventory, pos, findClientData(playerInventory, pos,
             BoboChickenPotBlockEntity.class, BoboChickenPotBlockEntity.SLOT_COUNT));
     }

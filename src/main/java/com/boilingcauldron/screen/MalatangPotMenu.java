@@ -24,7 +24,7 @@ public class MalatangPotMenu extends AbstractSeasoningPotMenu<MalatangPotBlockEn
         this(syncId, playerInventory, buf.readBlockPos());
     }
 
-    private MalatangPotMenu(int syncId, Inventory playerInventory, BlockPos pos) {
+    public MalatangPotMenu(int syncId, Inventory playerInventory, BlockPos pos) {
         this(syncId, playerInventory, pos, findClientData(playerInventory, pos,
             MalatangPotBlockEntity.class, MalatangPotBlockEntity.SLOT_COUNT));
     }
