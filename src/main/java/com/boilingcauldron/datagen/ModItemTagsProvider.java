@@ -34,5 +34,17 @@ public class ModItemTagsProvider extends ItemTagsProvider {
             ModItems.MUSHROOM_BASE.get(),
             ModItems.MALA_BASE.get(),
             ModItems.RATTAN_PEPPER_BASE.get());
+
+        // 幻色五香粉：可隐藏原料的成品
+        tag(ModTags.MASKABLE_DISHES).add(
+            ModItems.BOBO_CHICKEN.get(),
+            ModItems.MALATANG_BOWL.get());
+
+        // 幻色五香粉的染料来源（16 种原版染料）
+        tag(ModTags.DYES).add(
+            Items.WHITE_DYE, Items.ORANGE_DYE, Items.MAGENTA_DYE, Items.LIGHT_BLUE_DYE,
+            Items.YELLOW_DYE, Items.LIME_DYE, Items.PINK_DYE, Items.GRAY_DYE,
+            Items.LIGHT_GRAY_DYE, Items.CYAN_DYE, Items.PURPLE_DYE, Items.BLUE_DYE,
+            Items.BROWN_DYE, Items.GREEN_DYE, Items.RED_DYE, Items.BLACK_DYE);
     }
 }

@@ -16,4 +16,7 @@ public class ModFoods {
     public static final FoodProperties SICHUAN_PEPPER = new FoodProperties.Builder().nutrition(2).saturationMod(0.25F).build();
     public static final FoodProperties BAMBOO_FUNGUS = new FoodProperties.Builder().nutrition(1).saturationMod(0.25F).build();
     public static final FoodProperties BOBO_CHICKEN = new FoodProperties.Builder().nutrition(8).saturationMod(0.55F).build();
+    /** 麻辣烫成品：数值全部写在 NBT 里，基础食物属性为 0 */
+    public static final FoodProperties MALATANG_BOWL = new FoodProperties.Builder()
+        .nutrition(0).saturationMod(0.0F).alwaysEdible().build();
 }

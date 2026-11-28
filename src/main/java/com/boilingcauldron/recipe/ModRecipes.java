@@ -1,7 +1,8 @@
 /*
  * 沸鼎烟火（Boiling Cauldron）
  * 文件用途：注册自定义配方类型与序列化器（数据包 JSON 驱动）。
- * 更新：2026-11-21
+ * 移植：Fabric → Forge 1.20.1
+ * 更新：2026-11-28 上游 1.0.1：新增 mask_dish（幻色五香粉隐藏原料）
  */
 package com.boilingcauldron.recipe;
 
@@ -11,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,6 +33,11 @@ public class ModRecipes {
 
     public static final RegistryObject<RecipeSerializer<BoboSoakRecipe>> BOBO_SOAK_SERIALIZER =
         RECIPE_SERIALIZERS.register("bobo_soak", BoboSoakRecipeSerializer::new);
+
+    /** 隐藏成品原料的特殊合成配方 boiling-cauldron:mask_dish */
+    public static final RegistryObject<RecipeSerializer<MaskDishRecipe>> MASK_DISH_SERIALIZER =
+        RECIPE_SERIALIZERS.register("mask_dish",
+            () -> new SimpleCraftingRecipeSerializer<>(MaskDishRecipe::new));
 
     public static void register(IEventBus modBus) {
         RECIPE_TYPES.register(modBus);

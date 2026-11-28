@@ -10,6 +10,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 
 public final class ModTags {
 
@@ -35,6 +36,18 @@ public final class ModTags {
      */
     public static final TagKey<Item> KALEIDOSCOPE_CHILI = TagKey.create(Registries.ITEM,
         new ResourceLocation("forge", "crops/chilipepper"));
+
+    /** 可被幻色五香粉隐藏原料的成品标签 */
+    public static final TagKey<Item> MASKABLE_DISHES = TagKey.create(Registries.ITEM,
+        BoilingCauldron.id("maskable_dishes"));
+
+    /** 幻色五香粉可使用的染料标签 */
+    public static final TagKey<Item> DYES = TagKey.create(Registries.ITEM,
+        BoilingCauldron.id("dyes"));
+
+    /** 麻辣烫锅正下方可识别的基础热源；点燃的熔炉等由代码额外检测 */
+    public static final TagKey<Block> MALATANG_HEAT_SOURCES = TagKey.create(Registries.BLOCK,
+        BoilingCauldron.id("malatang_heat_sources"));
 
     private ModTags() {
     }

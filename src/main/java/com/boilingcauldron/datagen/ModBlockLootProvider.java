@@ -60,6 +60,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.BLOOMING_LOTUS_LEAF.get());
         dropSelf(ModBlocks.BOBO_CHICKEN_POT.get());
+        dropSelf(ModBlocks.MALATANG_POT.get());
         dropSelf(ModBlocks.BAMBOO_ROOT.get());
     }
 
@@ -172,6 +173,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             ModBlocks.BLOOMING_LOTUS_LEAF.get(),
             ModBlocks.LOTUS_MUD.get(),
             ModBlocks.LUSH_GRASS.get(),
-            ModBlocks.BOBO_CHICKEN_POT.get());
+            ModBlocks.BOBO_CHICKEN_POT.get(),
+            ModBlocks.MALATANG_POT.get());
     }
 }

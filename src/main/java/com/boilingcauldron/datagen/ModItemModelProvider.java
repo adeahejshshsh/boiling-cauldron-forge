@@ -36,6 +36,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // 成品
         basicItem(ModItems.BOBO_CHICKEN.get());
+        basicItem(ModItems.MALATANG_BOWL.get());
+        basicItem(ModItems.PHANTOM_FIVE_SPICE_POWDER.get());
 
         // 种子（贴图为 item/xxx_seeds）
         basicItem(ModItems.GINGER_SEEDS.get());
@@ -47,6 +49,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("bamboo_root", modLoc("block/bamboo_root"));
         withExistingParent("lotus_mud", modLoc("block/lotus_mud"));
         withExistingParent("bobo_chicken_pot", modLoc("block/bobo_chicken_pot"));
+        withExistingParent("malatang_pot", modLoc("block/malatang_pot"));
 
         // 十字植物：物品贴图取方块贴图（与手写资源一致：item/generated + 方块纹理）
         itemFromBlockTexture("bamboo_fungus_colony");

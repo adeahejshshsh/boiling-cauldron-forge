@@ -42,8 +42,15 @@ public class ModItems {
     public static final RegistryObject<Item> RATTAN_PEPPER_BASE = ITEMS.register("rattan_pepper_base",
         () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PHANTOM_FIVE_SPICE_POWDER =
+        ITEMS.register("phantom_five_spice_powder", () -> new PhantomFiveSpicePowderItem(new Item.Properties()));
+
     public static final RegistryObject<Item> BOBO_CHICKEN = ITEMS.register("bobo_chicken",
         () -> new BoboChickenItem(new Item.Properties().food(ModFoods.BOBO_CHICKEN)));
+
+    /** 麻辣烫成品：堆叠数为 1，饱食度写在 NBT 里 */
+    public static final RegistryObject<Item> MALATANG_BOWL = ITEMS.register("malatang_bowl",
+        () -> new MalatangBowlItem(new Item.Properties().stacksTo(1).food(ModFoods.MALATANG_BOWL)));
 
     // 种子物品（SeedItem 继承 BlockItem，指定自定义翻译键避免冲突）
     public static final RegistryObject<Item> GINGER_SEEDS = ITEMS.register("ginger_seeds",

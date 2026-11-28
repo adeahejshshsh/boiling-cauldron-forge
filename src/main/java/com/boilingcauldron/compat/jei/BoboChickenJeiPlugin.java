@@ -67,6 +67,9 @@ public class BoboChickenJeiPlugin implements IModPlugin {
         registration.addRecipeCatalyst(
             new ItemStack(ModBlocks.BOBO_CHICKEN_POT.get()),
             BoboSoakCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(
+            new ItemStack(ModBlocks.MALATANG_POT.get()),
+            BoboSoakCategory.RECIPE_TYPE);
     }
 
     /** 从当前世界的配方管理器读取；世界未加载时返回空列表（JEI 会在进入世界后重载） */

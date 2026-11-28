@@ -76,6 +76,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // 钵钵鸡锅：Blockbench 模型手写，仅生成 blockstate
         simpleBlock(ModBlocks.BOBO_CHICKEN_POT.get(),
             models().getExistingFile(modLoc("block/bobo_chicken_pot")));
+        simpleBlock(ModBlocks.MALATANG_POT.get(),
+            models().getExistingFile(modLoc("block/malatang_pot")));
     }
 
     private void cropWithAge(String name, Block block, IntegerProperty age, int maxAge) {

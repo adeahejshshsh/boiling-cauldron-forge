@@ -22,6 +22,10 @@ public class ModMenus {
         MENUS.register("bobo_chicken_pot", () -> IForgeMenuType.create(
             (windowId, inventory, data) -> new BoboChickenPotMenu(windowId, inventory, data.readBlockPos())));
 
+    public static final RegistryObject<MenuType<MalatangPotMenu>> MALATANG_POT =
+        MENUS.register("malatang_pot", () -> IForgeMenuType.create(
+            (windowId, inventory, data) -> new MalatangPotMenu(windowId, inventory, data.readBlockPos())));
+
     public static void register(IEventBus modBus) {
         MENUS.register(modBus);
     }

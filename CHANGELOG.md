@@ -4,6 +4,34 @@ All notable changes to this project are documented here.
 
 [中文备份](CHANGELOG.zh_cn.md)
 
+## 1.0.4-forge (2026-11-28)
+
+Ported upstream **1.0.1** (the Malatang update).
+
+### New
+
+- **Malatang Pot** — a 16-slot hot pot. Needs a heat source directly below
+  (campfire, soul campfire, fire, soul fire, magma block, or a lit furnace).
+  Each ingredient cooks in **20 seconds** and stays in the pot until taken.
+- **Malatang** — right-click a finished ingredient with a bowl to start a bowl,
+  then right-click more finished ingredients to add up to **4** of them.
+  Hunger, saturation and mob effects accumulate; eating returns the bowl.
+- **Phantom Five-Spice Powder** — craft with Bobo Chicken or Malatang to hide
+  the ingredient list from the tooltip (glint marks it as masked).
+- New recipe type `boiling-cauldron:mask_dish`.
+
+### Refactor
+
+- Bobo Chicken Pot and Malatang Pot now share `AbstractSeasoningPotBlock`,
+  `AbstractSeasoningPotBlockEntity` and `AbstractSeasoningPotMenu` (upstream design).
+  The Bobo pot keeps its 60-second soak; the Malatang pot is fixed at 20 seconds.
+- Bobo Chicken can still be re-soaked to stack flavours (that behaviour is unchanged).
+
+### Notes
+
+- Upstream stores flavour as an enum; this port keeps the datapack-driven
+  `FlavorProfile`, so base flavours are resolved through the `bobo_soak` recipes.
+
 ## 1.0.3-forge (2026-11-22)
 
 ### New

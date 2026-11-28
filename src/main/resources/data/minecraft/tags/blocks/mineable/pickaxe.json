@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "boiling-cauldron:bobo_chicken_pot"
+    "boiling-cauldron:bobo_chicken_pot",
+    "boiling-cauldron:malatang_pot"
   ]
 }
