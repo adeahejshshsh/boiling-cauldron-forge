@@ -69,7 +69,7 @@ public class BoboChickenPotScreen extends AbstractContainerScreen<BoboChickenPot
                 textX, textY, TEXT_COLOR, false);
         }
 
-        int soakTicks = Math.max(1, this.menu.getSoakTicks());
+        int soakTicks = Math.max(1, this.menu.getEffectiveCookingTicks());
         for (int slot = 0; slot < BoboChickenPotBlockEntity.SLOT_COUNT; slot++) {
             int progress = this.menu.getProgress(slot);
             if (progress < 0 || !this.menu.getSlot(slot).hasItem()) {

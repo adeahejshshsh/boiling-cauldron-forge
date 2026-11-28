@@ -9,15 +9,24 @@ package com.adeahejshshsh.boilingcauldron.block;
 import com.adeahejshshsh.boilingcauldron.block.entity.AbstractSeasoningPotBlockEntity;
 import com.adeahejshshsh.boilingcauldron.block.entity.BoboChickenPotBlockEntity;
 import com.adeahejshshsh.boilingcauldron.screen.BoboChickenPotMenu;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class BoboChickenPotBlock extends AbstractSeasoningPotBlock {
+
+    public static final MapCodec<BoboChickenPotBlock> CODEC = simpleCodec(BoboChickenPotBlock::new);
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
 
     public BoboChickenPotBlock(Properties properties) {
         super(properties);

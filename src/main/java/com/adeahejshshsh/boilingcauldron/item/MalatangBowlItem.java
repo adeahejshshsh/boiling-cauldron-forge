@@ -171,7 +171,7 @@ public class MalatangBowlItem extends Item {
         CompoundTag tag = copyTag(bowl);
         tag.putInt(HUNGER_KEY, getHunger(bowl) + food.nutrition());
         tag.putFloat(SATURATION_KEY, getSaturation(bowl)
-            + food.nutrition() * food.saturationModifier() * 2.0F);
+            + food.nutrition() * food.saturation() * 2.0F);
         writeTag(bowl, tag);
 
         for (FoodProperties.PossibleEffect entry : food.effects()) {

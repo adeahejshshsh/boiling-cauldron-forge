@@ -12,6 +12,7 @@ import com.adeahejshshsh.boilingcauldron.item.BoboChickenItem;
 import com.adeahejshshsh.boilingcauldron.item.FlavorProfile;
 import com.adeahejshshsh.boilingcauldron.item.MalatangBowlItem;
 import com.adeahejshshsh.boilingcauldron.screen.MalatangPotMenu;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -26,12 +27,20 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 public class MalatangPotBlock extends AbstractSeasoningPotBlock {
+
+    public static final MapCodec<MalatangPotBlock> CODEC = simpleCodec(MalatangPotBlock::new);
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
 
     public MalatangPotBlock(Properties properties) {
         super(properties);
